@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --purple: hsl(281, 83%, 54%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-color: var(--light-pink);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.flex-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    width: 90%; 
+    max-width: 550px; 
+    border-radius: 10px;
+
+}
+
+.heading {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 45px;
+    color: var(--Dark-purple);
+}
+
+.faq-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.faq-heading h2 {
+    font-size: 16px;
+    color: var(--Dark-purple);
+    transition: all ease-in-out 200ms;
+}
+
+.faq-heading h2:hover {
+    color: var(--purple);
+} 
+
+.faq-heading img {
+    align-self: flex-end;
+
+}
+
+.displayParagraph {
+    display: none;
+    height: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: height 0.5s ease; 
+    color: var(--Grayish-purple);
+}
+
+hr {
+    height: 3px;
+    background-color: var(--light-pink);
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
