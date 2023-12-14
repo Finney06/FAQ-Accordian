@@ -7,7 +7,7 @@ console.log(myElements);
 console.log(toggleButtons);
 
 for (let i = 0; i < toggleButtons.length; i++) {
-  toggleButtons[i].addEventListener('click', function() {
+  faqHeadings[i].addEventListener('click', function() {
     var currentElement = myElements[i];
     var currentButton = toggleButtons[i];
 
