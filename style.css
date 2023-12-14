@@ -21,14 +21,14 @@ body {
     background-color: var(--light-pink);
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 
 .flex-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 98vh;
     
 }
 
