@@ -1,20 +1,20 @@
 var myElements = document.getElementsByClassName('displayParagraph');
 var toggleButtons = document.getElementsByClassName('toggleButton');
-var faqHeadings = document.getElementsByClassName('faq-heading');
+var faqHeadings = document.getElementsByClassName('faq-heading')
 var currentlyOpenElement = null;
 
 console.log(myElements);
 console.log(toggleButtons);
 
 for (let i = 0; i < toggleButtons.length; i++) {
-  faqHeadings[i].addEventListener('click', function() {
+  toggleButtons[i].addEventListener('click', function() {
     var currentElement = myElements[i];
     var currentButton = toggleButtons[i];
 
     // Close the currently open element, if any 
     if (currentlyOpenElement && currentlyOpenElement !== currentElement) {
       currentlyOpenElement.style.height = '0';
-      currentlyOpenElement.style.display = 'none';
+      // currentlyOpenElement.style.display = 'none';
       toggleButtonImage(previousButton, 'plus'); // Change image to "plus"
     }
 
