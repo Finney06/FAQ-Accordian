@@ -2,6 +2,9 @@ var myElements = document.getElementsByClassName('displayParagraph');
 var toggleButtons = document.getElementsByClassName('toggleButton');
 var currentlyOpenElement = null;
 
+console.log(myElements);
+console.log(toggleButtons);
+
 for (let i = 0; i < toggleButtons.length; i++) {
   toggleButtons[i].addEventListener('click', function() {
     var currentElement = myElements[i];
@@ -11,7 +14,7 @@ for (let i = 0; i < toggleButtons.length; i++) {
     if (currentlyOpenElement && currentlyOpenElement !== currentElement) {
       currentlyOpenElement.style.height = '0';
       currentlyOpenElement.style.display = 'none';
-      toggleButtonImage(currentButton, 'plus'); // Change image to "plus"
+      toggleButtonImage(previousButton, 'plus'); // Change image to "plus"
     }
 
     // Toggle the height and display property of the clicked element
@@ -21,6 +24,7 @@ for (let i = 0; i < toggleButtons.length; i++) {
       currentElement.style.height = currentElement.scrollHeight + 'px';
       toggleButtonImage(currentButton, 'minus'); // Change image to "minus"
       currentlyOpenElement = currentElement; // Update the currently open element
+      previousButton = currentButton; // update the formal open button
     } else {
       console.log("yayy")
       currentElement.style.height = '0';
