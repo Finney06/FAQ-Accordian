@@ -67,6 +67,7 @@ body {
 
 .faq-heading h2:hover {
     color: var(--purple);
+    cursor: pointer;
 } 
 
 .faq-heading img {
