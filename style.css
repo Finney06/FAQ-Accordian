@@ -29,6 +29,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 98vh;
+    opacity: 0; /* Initially set to be invisible */
+    animation: fadeInUp 1s forwards; /* Apply the fadeInUp animation */
     
 }
 
@@ -38,6 +40,7 @@ body {
     width: 90%; 
     max-width: 550px; 
     border-radius: 10px;
+    /* transform: translateY(40px);  */
 
 }
 
@@ -89,6 +92,17 @@ hr {
     background-color: var(--light-pink);
     border: none;
     border-radius: 5px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 450px) {
